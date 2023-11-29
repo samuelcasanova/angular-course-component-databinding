@@ -4,10 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { ServerEditComponent } from './server-edit/server-edit.component';
+import { ServerComponent } from './server/server.component';
+import { BlueprintComponent } from './blueprint/blueprint.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ServerEditComponent,
+    ServerComponent,
+    BlueprintComponent
   ],
   imports: [
     BrowserModule,
