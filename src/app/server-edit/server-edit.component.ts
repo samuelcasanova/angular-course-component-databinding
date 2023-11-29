@@ -9,16 +9,15 @@ import { Blueprint } from '../blueprint.model';
 })
 
 export class ServerEditComponent {
-  newServerName = '';
   newServerContent = '';
   @Output() serverAdded = new EventEmitter<Server>()
   @Output() blueprintAdded = new EventEmitter<Server>()
 
-  onAddServer() {
-    this.serverAdded.emit(new Server(this.newServerName, this.newServerContent))
+  onAddServer(serverName: string) {
+    this.serverAdded.emit(new Server(serverName, this.newServerContent))
   }
 
-  onAddBlueprint() {
-    this.blueprintAdded.emit(new Blueprint(this.newServerName, this.newServerContent))
+  onAddBlueprint(serverName: string) {
+    this.blueprintAdded.emit(new Blueprint(serverName, this.newServerContent))
   }
 }
